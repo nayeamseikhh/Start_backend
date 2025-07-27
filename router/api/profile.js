@@ -1,8 +1,7 @@
 const express = require("express");
+const { userInfo } = require("../../controller/profile/profileController");
 const router = express.Router();
 
-router.use("/", (req, res) => {
-  res.send("this is PROFILE api");
-});
+router.use("/", userInfo);
 
 module.exports = router;

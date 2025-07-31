@@ -1,8 +1,10 @@
 const express = require("express");
+const {
+  registration,
+} = require("../../controller/registration/registrationController");
+
 const router = express.Router();
 
-router.use("/", (req, res) => {
-  res.send("this is REGISTRATION api");
-});
+router.use("/", registration);
 
 module.exports = router;
